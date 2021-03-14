@@ -7,4 +7,18 @@
 #IncludeRegexTransform: 
 
 /home/fillinmar/technoparkC++/techno-ih1/src/storage/storage.c
+storage.h
+/home/fillinmar/technoparkC++/techno-ih1/src/storage/storage.h
+stdbool.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/fillinmar/technoparkC++/techno-ih1/src/storage/storage.h
+stdbool.h
+-
+stdio.h
+-
 

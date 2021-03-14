@@ -1,130 +1,130 @@
 //
 // Created by fillinmar on 11.03.2021.
 //
-
 #include "processing.h"
 #include "storage.h"
 #include <stdio.h>
 #include <string.h>
 
-char get_char() {
-    char c = '\0';
-    int result = 0;
+const size_t size_multiplier = 2;
+const size_t size = 0;
+const size_t capacity = 2;
+const size_t load_maximum = 2 / 3;
 
-    do {
-        result = scanf("%c", &c);
-    } while (result != 1);
+const size_t hash_base = 519;
+const size_t step = 1;
 
-    return c;
-};
-// Returns NUL on error
-char *get_string() {
-    struct buffer {
-        char *string;
-        size_t size;
-        size_t cap;
-    } buf = {NULL, 0, 0};
-    char c = '\0';
-
-    while (c = get_char(), c != EOF && c != '\n') {
-        if (buf.size + 1 >= buf.cap) {
-            size_t new_cap = !buf.cap ? 1 : buf.cap * 2;
-
-            char *tmp = (char *) malloc((new_cap + 1) * sizeof(char));
-
-            if (!tmp) {
-                if (buf.string) {
-                    free(buf.string);
-                }
-                return NULL;
-            }
-
-            if (buf.string) {
-                tmp = strcpy(tmp, buf.string);
-                free(buf.string);
-            }
-
-            buf.string = tmp;
-            buf.cap = new_cap;
-        }
-
-        buf.string[buf.size] = c;
-        buf.string[buf.size + 1] = '\0';
-        ++buf.size;
-    }
-
-    return buf.string;
-};
-//typedef struct {
-//    char *name;
-//    char *content;
-//    char *tags;
-//    int comments; // numbers in the first month
-//    int marks; // the same
-//    char *date;
-//} Metadata;
-//
-//
-//typedef struct {
-//    size_t size;
-//    size_t capacity;
-//
-//    Metadata *data;
-//} Element;
-//
-//typedef struct {
-//    size_t size_multiplier;
-//    size_t size;
-//    size_t capacity;
-//    size_t load_maximum;
-//
-//    size_t hash_base;
-//    size_t step;
-//
-//    Element *map;
-//} Storage;
-void print_values(Storage *st) {
-    printf("output:\n");
-    printf("{\n");
-
-    for (size_t i = 0; i < st->capacity; ++i) {
-        if (st->map[i].data == NULL) {
-            continue;
-        }
-        printf("\t{\n");
-        printf("\t\tType: %s;\n", st->map[i].data[0].name);
-
-        printf("\t\tElements:[\n");
-        for (size_t j = 0; j < st->map[i].size; ++j) {
-            printf("\t\t\t{\n");
-            printf("\t\t\t\tName: %s;\n", st->map[i].data[j].name);
-            printf("\t\t\t\tColour: %d;\n", st->map[i].data[j].comments);
-            printf("\t\t\t};\n");
-        }
-
-        printf("\t\t];\n");
-
-        printf("\t};\n");
-
-    }
-
-    printf("};");
-};
-//#include "processing.h"
-//#include "storage.h"
-
+const char *about = "about";
+const char *print = "print";
+const char *add_extra = "add";
+const char *stop = "stop";
 
 int main() {
-    Metadata blog;
+    Storage *st = create_storage(size_multiplier, size, capacity, load_maximum, hash_base, step);
 
-    printf("Введите название блога\n");
-    char *name = get_string();
+    char *cmd = "about";
+
+    do {
+        if (!strcmp(cmd, about)) {
+            printf("HELP: \n");
+            printf("\t'about' - command used to output help info about used commands\n");
+            printf("\t'print' - command used to print stored values, grouped by type\n");
+            printf("\t'add' - command used to add values to storage\n");
+            printf("\t'stop' - command used to stop execution\n");
+            continue;
+        }
+
+        if (!strcmp(cmd, print)) {
+            print_values(st);
+            continue;
+        }
+
+        if (!strcmp(cmd, stop)) {
+            break;
+        }
+
+        if (!strcmp(cmd, add_extra)) {
+            printf("Input name of blog: ");
+            char *name = get_string();
+            if (name == NULL) {
+                printf("\nfailed to allocate memory; stopping execution...");
+                break;
+            }
+
+            printf("Input content of this blog: ");
+            char *content = get_string();
+
+            if (content == NULL) {
+                printf("\nfailed to allocate memory; stopping execution...");
+                break;
+            }
+
+            printf("Input tags of this blog: ");
+            char *tags = get_string();
+
+            if (tags == NULL) {
+                printf("\nfailed to allocate memory; stopping execution...");
+                break;
+            }
+            printf("Input number of  comments in the first month :");
+            int  comments = get_int();
+
+            if (comments == NULL) {
+                printf("\nfailed to allocate memory; stopping execution...");
+                break;
+            }
+            printf("Input number of marks in the first month: ");
+            int  marks = get_int();
+
+            if (marks == NULL) {
+                printf("\nfailed to allocate memory; stopping execution...");
+                break;
+            }
+            printf("Input date of this blog: ");
+            char *date = get_int();
+
+            if (date == NULL) {
+                printf("\nfailed to allocate memory; stopping execution...");
+                break;
+            }
+
+
+            Metadata blog = {name, content, tags, comments, marks, date};
+
+            if (!add(&blog, st)) {
+                printf("\nfailed to add blog to storage; stopping execution...");
+                break;
+            }
+
+            continue;
+        }
+
+        printf("unknown command: %s\n", cmd);
+    } while (printf("\nInput command: "), cmd = get_string(), cmd != NULL);
+
+
+    free_storage(&st);
+
+    return 0;
+}
+
+//#include "processing.h"
+//#include "storage.h"
+//#include <stdio.h>
+//
+//
+//
+//int main() {
+//    Metadata blog;
+//
+//    printf("Введите название блога\n");
+//    char *name = get_string();
 //    printf(name); printf("\n");
 //    printf("Введите содержимое\n");
 //     scanf( blog.content);
 //     printf("Введите тэги\n");
 //     scanf( blog.tags);
-    printf("Введите кол-во комент за 1 месяц\n");
+//    printf("Введите кол-во комент за 1 месяц\n");
 //    scanf("%d", &blog.comments);
 //    printf("%d", blog.comments); printf("\n");
 //
@@ -134,5 +134,5 @@ int main() {
 //     printf("Введите дату опубликования\n");
 //     scanf( blog.date);
 //     print_values()
-    return 0;
-}
+//    return 0;
+//}
