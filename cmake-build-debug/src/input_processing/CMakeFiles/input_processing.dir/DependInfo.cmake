@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/fillinmar/testNikita/techno-iz1/src/input_processing/processing.c" "/home/fillinmar/testNikita/techno-iz1/cmake-build-debug/src/input_processing/CMakeFiles/input_processing.dir/processing.c.o"
+  "/home/fillinmar/technoparkC++/techno-ih1/src/input_processing/processing.c" "/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/input_processing/CMakeFiles/input_processing.dir/processing.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

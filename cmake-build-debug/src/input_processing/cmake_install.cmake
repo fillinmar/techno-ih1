@@ -1,4 +1,4 @@
-# Install script for directory: /home/fillinmar/testNikita/techno-iz1/src/input_processing
+# Install script for directory: /home/fillinmar/technoparkC++/techno-ih1/src/input_processing
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

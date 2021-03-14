@@ -63,10 +63,10 @@ RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fillinmar/testNikita/techno-iz1
+CMAKE_SOURCE_DIR = /home/fillinmar/technoparkC++/techno-ih1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fillinmar/testNikita/techno-iz1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include src/input_processing/CMakeFiles/input_processing.dir/depend.make
@@ -79,16 +79,16 @@ include src/input_processing/CMakeFiles/input_processing.dir/flags.make
 
 src/input_processing/CMakeFiles/input_processing.dir/processing.c.o: src/input_processing/CMakeFiles/input_processing.dir/flags.make
 src/input_processing/CMakeFiles/input_processing.dir/processing.c.o: ../src/input_processing/processing.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/input_processing/CMakeFiles/input_processing.dir/processing.c.o"
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/src/input_processing && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/input_processing.dir/processing.c.o   -c /home/fillinmar/testNikita/techno-iz1/src/input_processing/processing.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/input_processing/CMakeFiles/input_processing.dir/processing.c.o"
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/input_processing && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/input_processing.dir/processing.c.o   -c /home/fillinmar/technoparkC++/techno-ih1/src/input_processing/processing.c
 
 src/input_processing/CMakeFiles/input_processing.dir/processing.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/input_processing.dir/processing.c.i"
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/src/input_processing && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fillinmar/testNikita/techno-iz1/src/input_processing/processing.c > CMakeFiles/input_processing.dir/processing.c.i
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/input_processing && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fillinmar/technoparkC++/techno-ih1/src/input_processing/processing.c > CMakeFiles/input_processing.dir/processing.c.i
 
 src/input_processing/CMakeFiles/input_processing.dir/processing.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/input_processing.dir/processing.c.s"
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/src/input_processing && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fillinmar/testNikita/techno-iz1/src/input_processing/processing.c -o CMakeFiles/input_processing.dir/processing.c.s
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/input_processing && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fillinmar/technoparkC++/techno-ih1/src/input_processing/processing.c -o CMakeFiles/input_processing.dir/processing.c.s
 
 # Object files for target input_processing
 input_processing_OBJECTS = \
@@ -100,9 +100,9 @@ input_processing_EXTERNAL_OBJECTS =
 src/input_processing/libinput_processing.a: src/input_processing/CMakeFiles/input_processing.dir/processing.c.o
 src/input_processing/libinput_processing.a: src/input_processing/CMakeFiles/input_processing.dir/build.make
 src/input_processing/libinput_processing.a: src/input_processing/CMakeFiles/input_processing.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libinput_processing.a"
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/src/input_processing && $(CMAKE_COMMAND) -P CMakeFiles/input_processing.dir/cmake_clean_target.cmake
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/src/input_processing && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/input_processing.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libinput_processing.a"
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/input_processing && $(CMAKE_COMMAND) -P CMakeFiles/input_processing.dir/cmake_clean_target.cmake
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/input_processing && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/input_processing.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/input_processing/CMakeFiles/input_processing.dir/build: src/input_processing/libinput_processing.a
@@ -110,10 +110,10 @@ src/input_processing/CMakeFiles/input_processing.dir/build: src/input_processing
 .PHONY : src/input_processing/CMakeFiles/input_processing.dir/build
 
 src/input_processing/CMakeFiles/input_processing.dir/clean:
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/src/input_processing && $(CMAKE_COMMAND) -P CMakeFiles/input_processing.dir/cmake_clean.cmake
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/input_processing && $(CMAKE_COMMAND) -P CMakeFiles/input_processing.dir/cmake_clean.cmake
 .PHONY : src/input_processing/CMakeFiles/input_processing.dir/clean
 
 src/input_processing/CMakeFiles/input_processing.dir/depend:
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fillinmar/testNikita/techno-iz1 /home/fillinmar/testNikita/techno-iz1/src/input_processing /home/fillinmar/testNikita/techno-iz1/cmake-build-debug /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/src/input_processing /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/src/input_processing/CMakeFiles/input_processing.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fillinmar/technoparkC++/techno-ih1 /home/fillinmar/technoparkC++/techno-ih1/src/input_processing /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/input_processing /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/input_processing/CMakeFiles/input_processing.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/input_processing/CMakeFiles/input_processing.dir/depend
 

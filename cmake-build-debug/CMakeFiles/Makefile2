@@ -64,10 +64,10 @@ RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fillinmar/testNikita/techno-iz1
+CMAKE_SOURCE_DIR = /home/fillinmar/technoparkC++/techno-ih1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fillinmar/testNikita/techno-iz1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -75,24 +75,18 @@ CMAKE_BINARY_DIR = /home/fillinmar/testNikita/techno-iz1/cmake-build-debug
 # The main recursive "all" target.
 all: cmd/all
 all: src/all
-all: vendor/googletest/all
-all: tests/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: cmd/preinstall
 preinstall: src/preinstall
-preinstall: vendor/googletest/preinstall
-preinstall: tests/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: cmd/clean
 clean: src/clean
-clean: vendor/googletest/clean
-clean: tests/clean
 
 .PHONY : clean
 
@@ -172,120 +166,6 @@ src/storage/clean: src/storage/CMakeFiles/storage.dir/clean
 .PHONY : src/storage/clean
 
 #=============================================================================
-# Directory level rules for directory tests
-
-# Recursive "all" directory target.
-tests/all: tests/unit/all
-
-.PHONY : tests/all
-
-# Recursive "preinstall" directory target.
-tests/preinstall: tests/unit/preinstall
-
-.PHONY : tests/preinstall
-
-# Recursive "clean" directory target.
-tests/clean: tests/unit/clean
-
-.PHONY : tests/clean
-
-#=============================================================================
-# Directory level rules for directory tests/unit
-
-# Recursive "all" directory target.
-tests/unit/all: tests/unit/storage/all
-
-.PHONY : tests/unit/all
-
-# Recursive "preinstall" directory target.
-tests/unit/preinstall: tests/unit/storage/preinstall
-
-.PHONY : tests/unit/preinstall
-
-# Recursive "clean" directory target.
-tests/unit/clean: tests/unit/storage/clean
-
-.PHONY : tests/unit/clean
-
-#=============================================================================
-# Directory level rules for directory tests/unit/storage
-
-# Recursive "all" directory target.
-tests/unit/storage/all: tests/unit/storage/CMakeFiles/storage_test.dir/all
-
-.PHONY : tests/unit/storage/all
-
-# Recursive "preinstall" directory target.
-tests/unit/storage/preinstall:
-
-.PHONY : tests/unit/storage/preinstall
-
-# Recursive "clean" directory target.
-tests/unit/storage/clean: tests/unit/storage/CMakeFiles/storage_test.dir/clean
-
-.PHONY : tests/unit/storage/clean
-
-#=============================================================================
-# Directory level rules for directory vendor/googletest
-
-# Recursive "all" directory target.
-vendor/googletest/all: vendor/googletest/googlemock/all
-
-.PHONY : vendor/googletest/all
-
-# Recursive "preinstall" directory target.
-vendor/googletest/preinstall: vendor/googletest/googlemock/preinstall
-
-.PHONY : vendor/googletest/preinstall
-
-# Recursive "clean" directory target.
-vendor/googletest/clean: vendor/googletest/googlemock/clean
-
-.PHONY : vendor/googletest/clean
-
-#=============================================================================
-# Directory level rules for directory vendor/googletest/googlemock
-
-# Recursive "all" directory target.
-vendor/googletest/googlemock/all: vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/all
-vendor/googletest/googlemock/all: vendor/googletest/googlemock/CMakeFiles/gmock.dir/all
-vendor/googletest/googlemock/all: vendor/googletest/googletest/all
-
-.PHONY : vendor/googletest/googlemock/all
-
-# Recursive "preinstall" directory target.
-vendor/googletest/googlemock/preinstall: vendor/googletest/googletest/preinstall
-
-.PHONY : vendor/googletest/googlemock/preinstall
-
-# Recursive "clean" directory target.
-vendor/googletest/googlemock/clean: vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
-vendor/googletest/googlemock/clean: vendor/googletest/googlemock/CMakeFiles/gmock.dir/clean
-vendor/googletest/googlemock/clean: vendor/googletest/googletest/clean
-
-.PHONY : vendor/googletest/googlemock/clean
-
-#=============================================================================
-# Directory level rules for directory vendor/googletest/googletest
-
-# Recursive "all" directory target.
-vendor/googletest/googletest/all: vendor/googletest/googletest/CMakeFiles/gtest.dir/all
-vendor/googletest/googletest/all: vendor/googletest/googletest/CMakeFiles/gtest_main.dir/all
-
-.PHONY : vendor/googletest/googletest/all
-
-# Recursive "preinstall" directory target.
-vendor/googletest/googletest/preinstall:
-
-.PHONY : vendor/googletest/googletest/preinstall
-
-# Recursive "clean" directory target.
-vendor/googletest/googletest/clean: vendor/googletest/googletest/CMakeFiles/gtest.dir/clean
-vendor/googletest/googletest/clean: vendor/googletest/googletest/CMakeFiles/gtest_main.dir/clean
-
-.PHONY : vendor/googletest/googletest/clean
-
-#=============================================================================
 # Target rules for target cmd/CMakeFiles/main.dir
 
 # All Build rule for target.
@@ -293,14 +173,14 @@ cmd/CMakeFiles/main.dir/all: src/storage/CMakeFiles/storage.dir/all
 cmd/CMakeFiles/main.dir/all: src/input_processing/CMakeFiles/input_processing.dir/all
 	$(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target main"
 .PHONY : cmd/CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 cmd/CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/CMakeFiles/main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles 0
 .PHONY : cmd/CMakeFiles/main.dir/rule
 
 # Convenience name for target.
@@ -320,14 +200,14 @@ cmd/CMakeFiles/main.dir/clean:
 src/storage/CMakeFiles/storage.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/storage/CMakeFiles/storage.dir/build.make src/storage/CMakeFiles/storage.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/storage/CMakeFiles/storage.dir/build.make src/storage/CMakeFiles/storage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target storage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target storage"
 .PHONY : src/storage/CMakeFiles/storage.dir/all
 
 # Build rule for subdir invocation for target.
 src/storage/CMakeFiles/storage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/storage/CMakeFiles/storage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles 0
 .PHONY : src/storage/CMakeFiles/storage.dir/rule
 
 # Convenience name for target.
@@ -347,14 +227,14 @@ src/storage/CMakeFiles/storage.dir/clean:
 src/input_processing/CMakeFiles/input_processing.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/input_processing/CMakeFiles/input_processing.dir/build.make src/input_processing/CMakeFiles/input_processing.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/input_processing/CMakeFiles/input_processing.dir/build.make src/input_processing/CMakeFiles/input_processing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target input_processing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target input_processing"
 .PHONY : src/input_processing/CMakeFiles/input_processing.dir/all
 
 # Build rule for subdir invocation for target.
 src/input_processing/CMakeFiles/input_processing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/input_processing/CMakeFiles/input_processing.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles 0
 .PHONY : src/input_processing/CMakeFiles/input_processing.dir/rule
 
 # Convenience name for target.
@@ -366,143 +246,6 @@ input_processing: src/input_processing/CMakeFiles/input_processing.dir/rule
 src/input_processing/CMakeFiles/input_processing.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/input_processing/CMakeFiles/input_processing.dir/build.make src/input_processing/CMakeFiles/input_processing.dir/clean
 .PHONY : src/input_processing/CMakeFiles/input_processing.dir/clean
-
-#=============================================================================
-# Target rules for target vendor/googletest/googlemock/CMakeFiles/gmock_main.dir
-
-# All Build rule for target.
-vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/all: vendor/googletest/googlemock/CMakeFiles/gmock.dir/all
-vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/all: vendor/googletest/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) $(MAKESILENT) -f vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
-	$(MAKE) $(MAKESILENT) -f vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target gmock_main"
-.PHONY : vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/all
-
-# Build rule for subdir invocation for target.
-vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 0
-.PHONY : vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
-
-# Convenience name for target.
-gmock_main: vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
-
-.PHONY : gmock_main
-
-# clean rule for target.
-vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
-.PHONY : vendor/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
-
-#=============================================================================
-# Target rules for target vendor/googletest/googlemock/CMakeFiles/gmock.dir
-
-# All Build rule for target.
-vendor/googletest/googlemock/CMakeFiles/gmock.dir/all: vendor/googletest/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) $(MAKESILENT) -f vendor/googletest/googlemock/CMakeFiles/gmock.dir/build.make vendor/googletest/googlemock/CMakeFiles/gmock.dir/depend
-	$(MAKE) $(MAKESILENT) -f vendor/googletest/googlemock/CMakeFiles/gmock.dir/build.make vendor/googletest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target gmock"
-.PHONY : vendor/googletest/googlemock/CMakeFiles/gmock.dir/all
-
-# Build rule for subdir invocation for target.
-vendor/googletest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vendor/googletest/googlemock/CMakeFiles/gmock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 0
-.PHONY : vendor/googletest/googlemock/CMakeFiles/gmock.dir/rule
-
-# Convenience name for target.
-gmock: vendor/googletest/googlemock/CMakeFiles/gmock.dir/rule
-
-.PHONY : gmock
-
-# clean rule for target.
-vendor/googletest/googlemock/CMakeFiles/gmock.dir/clean:
-	$(MAKE) $(MAKESILENT) -f vendor/googletest/googlemock/CMakeFiles/gmock.dir/build.make vendor/googletest/googlemock/CMakeFiles/gmock.dir/clean
-.PHONY : vendor/googletest/googlemock/CMakeFiles/gmock.dir/clean
-
-#=============================================================================
-# Target rules for target vendor/googletest/googletest/CMakeFiles/gtest.dir
-
-# All Build rule for target.
-vendor/googletest/googletest/CMakeFiles/gtest.dir/all:
-	$(MAKE) $(MAKESILENT) -f vendor/googletest/googletest/CMakeFiles/gtest.dir/build.make vendor/googletest/googletest/CMakeFiles/gtest.dir/depend
-	$(MAKE) $(MAKESILENT) -f vendor/googletest/googletest/CMakeFiles/gtest.dir/build.make vendor/googletest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target gtest"
-.PHONY : vendor/googletest/googletest/CMakeFiles/gtest.dir/all
-
-# Build rule for subdir invocation for target.
-vendor/googletest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vendor/googletest/googletest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 0
-.PHONY : vendor/googletest/googletest/CMakeFiles/gtest.dir/rule
-
-# Convenience name for target.
-gtest: vendor/googletest/googletest/CMakeFiles/gtest.dir/rule
-
-.PHONY : gtest
-
-# clean rule for target.
-vendor/googletest/googletest/CMakeFiles/gtest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f vendor/googletest/googletest/CMakeFiles/gtest.dir/build.make vendor/googletest/googletest/CMakeFiles/gtest.dir/clean
-.PHONY : vendor/googletest/googletest/CMakeFiles/gtest.dir/clean
-
-#=============================================================================
-# Target rules for target vendor/googletest/googletest/CMakeFiles/gtest_main.dir
-
-# All Build rule for target.
-vendor/googletest/googletest/CMakeFiles/gtest_main.dir/all: vendor/googletest/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) $(MAKESILENT) -f vendor/googletest/googletest/CMakeFiles/gtest_main.dir/build.make vendor/googletest/googletest/CMakeFiles/gtest_main.dir/depend
-	$(MAKE) $(MAKESILENT) -f vendor/googletest/googletest/CMakeFiles/gtest_main.dir/build.make vendor/googletest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target gtest_main"
-.PHONY : vendor/googletest/googletest/CMakeFiles/gtest_main.dir/all
-
-# Build rule for subdir invocation for target.
-vendor/googletest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vendor/googletest/googletest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 0
-.PHONY : vendor/googletest/googletest/CMakeFiles/gtest_main.dir/rule
-
-# Convenience name for target.
-gtest_main: vendor/googletest/googletest/CMakeFiles/gtest_main.dir/rule
-
-.PHONY : gtest_main
-
-# clean rule for target.
-vendor/googletest/googletest/CMakeFiles/gtest_main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f vendor/googletest/googletest/CMakeFiles/gtest_main.dir/build.make vendor/googletest/googletest/CMakeFiles/gtest_main.dir/clean
-.PHONY : vendor/googletest/googletest/CMakeFiles/gtest_main.dir/clean
-
-#=============================================================================
-# Target rules for target tests/unit/storage/CMakeFiles/storage_test.dir
-
-# All Build rule for target.
-tests/unit/storage/CMakeFiles/storage_test.dir/all: src/storage/CMakeFiles/storage.dir/all
-tests/unit/storage/CMakeFiles/storage_test.dir/all: vendor/googletest/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) $(MAKESILENT) -f tests/unit/storage/CMakeFiles/storage_test.dir/build.make tests/unit/storage/CMakeFiles/storage_test.dir/depend
-	$(MAKE) $(MAKESILENT) -f tests/unit/storage/CMakeFiles/storage_test.dir/build.make tests/unit/storage/CMakeFiles/storage_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles --progress-num=15,16,17 "Built target storage_test"
-.PHONY : tests/unit/storage/CMakeFiles/storage_test.dir/all
-
-# Build rule for subdir invocation for target.
-tests/unit/storage/CMakeFiles/storage_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 7
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/unit/storage/CMakeFiles/storage_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 0
-.PHONY : tests/unit/storage/CMakeFiles/storage_test.dir/rule
-
-# Convenience name for target.
-storage_test: tests/unit/storage/CMakeFiles/storage_test.dir/rule
-
-.PHONY : storage_test
-
-# clean rule for target.
-tests/unit/storage/CMakeFiles/storage_test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f tests/unit/storage/CMakeFiles/storage_test.dir/build.make tests/unit/storage/CMakeFiles/storage_test.dir/clean
-.PHONY : tests/unit/storage/CMakeFiles/storage_test.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -6,15 +6,5 @@
 
 #IncludeRegexTransform: 
 
-/home/fillinmar/testNikita/techno-iz1/src/input_processing/processing.c
-processing.h
-/home/fillinmar/testNikita/techno-iz1/src/input_processing/processing.h
-stdio.h
--
-stdlib.h
--
-string.h
--
-
-/home/fillinmar/testNikita/techno-iz1/src/input_processing/processing.h
+/home/fillinmar/technoparkC++/techno-ih1/src/input_processing/processing.c
 

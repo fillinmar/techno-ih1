@@ -6,21 +6,3 @@
 
 #IncludeRegexTransform: 
 
-../src/input_processing/processing.h
-
-../src/storage/storage.h
-stdbool.h
--
-stdio.h
--
-
-/home/fillinmar/testNikita/techno-iz1/cmd/main.c
-processing.h
-/home/fillinmar/testNikita/techno-iz1/cmd/processing.h
-storage.h
-/home/fillinmar/testNikita/techno-iz1/cmd/storage.h
-stdio.h
--
-string.h
--
-

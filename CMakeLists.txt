@@ -12,11 +12,11 @@ set(CMAKE_C_FLAGS "--coverage")
 
 add_subdirectory(cmd)
 add_subdirectory(src)
-
- if(test)
-    enable_testing()
-
-    add_subdirectory(vendor/googletest)
-
-    add_subdirectory(tests)
-endif(test)
+#
+#if(test)
+#    enable_testing()
+#
+#    add_subdirectory(vendor/googletest)
+#
+#    add_subdirectory(tests)
+#endif(test)

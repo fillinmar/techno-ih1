@@ -68,81 +68,13 @@ RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fillinmar/testNikita/techno-iz1
+CMAKE_SOURCE_DIR = /home/fillinmar/technoparkC++/techno-ih1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fillinmar/testNikita/techno-iz1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/139/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/snap/clion/139/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -155,16 +87,27 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/snap/clion/139/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/cmd/CMakeFiles/progress.marks
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/testNikita/techno-iz1/cmake-build-debug/CMakeFiles 0
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/cmd/CMakeFiles/progress.marks
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/clean
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/clean
 .PHONY : clean
 
 # The main clean target
@@ -174,22 +117,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/preinstall
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/preinstall
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 cmd/CMakeFiles/main.dir/rule:
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/CMakeFiles/main.dir/rule
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/CMakeFiles/main.dir/rule
 .PHONY : cmd/CMakeFiles/main.dir/rule
 
 # Convenience name for target.
@@ -199,7 +142,7 @@ main: cmd/CMakeFiles/main.dir/rule
 
 # fast build rule for target.
 main/fast:
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/build
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/build
 .PHONY : main/fast
 
 main.o: main.c.o
@@ -208,7 +151,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/main.c.o
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -217,7 +160,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/main.c.i
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -226,7 +169,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/main.c.s
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -236,12 +179,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... test"
 	@echo "... main"
 	@echo "... main.o"
 	@echo "... main.i"
@@ -257,6 +195,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/fillinmar/testNikita/techno-iz1/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

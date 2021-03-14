@@ -1,4 +1,4 @@
-# Install script for directory: /home/fillinmar/testNikita/techno-iz1/src/storage
+# Install script for directory: /home/fillinmar/technoparkC++/techno-ih1/src/storage
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
