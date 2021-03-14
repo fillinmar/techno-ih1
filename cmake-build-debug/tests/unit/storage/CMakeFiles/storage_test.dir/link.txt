@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wno-unknown-pragmas -Wno-sign-compare -Woverloaded-virtual -Wwrite-strings -Wno-unused -Werror -Wpedantic -fprofile-arcs -ftest-coverage -O0 -g   CMakeFiles/storage_test.dir/main.cpp.o CMakeFiles/storage_test.dir/storage.cpp.o  -o storage_test  ../../../src/storage/libstorage.a ../../../lib/libgtestd.a -lpthread 

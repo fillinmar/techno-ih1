@@ -4,5 +4,7 @@
 
 #ifndef TECHNO_IH1_PROCESSING_H
 #define TECHNO_IH1_PROCESSING_H
+char get_char();
 
+char *get_string();
 #endif //TECHNO_IH1_PROCESSING_H
