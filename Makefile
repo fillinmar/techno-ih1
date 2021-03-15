@@ -1,53 +1,69 @@
 BUILD_DIR?=build
+# BUILD PROJECT :
+build-project:
+	mkdir $(BUILD_DIR) && cd $(BUILD_DIR) && cmake .. && make
 
-run-test-template:
-	./$(dir)/tests/unit/$(test_dir)/$(test_name)
+# TEST RUNNING :
+run-date-test:
+	./$(BUILD_DIR)/tests/unit/date/date_test
 
-run-storage-test:
-	make run-test-template  dir=$(BUILD_DIR)  test_dir=storage  test_name=storage_test
+run-blog-test:
+	./$(BUILD_DIR)/tests/unit/blog/blog_test
 
 run-all-tests:
-	echo "RUNNING TESTS :" \
-				&& make run-storage-test
+	make run-date-test \
+			&& make run-blog-test
 
-build-project:
-	mkdir build && cd build && cmake -Dtest=ON --build .. && make
+# VALGRIND RUNNING :
+run-valgrind-check:
+	valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --undef-value-errors=no --verbose $(dir)
 
-generate-gcov:
-	cd $(output) && gcov $(dir)/src/$(test_dir)/CMakeFiles/$(test_name).dir/$(test_value).c.gcno && cp -rf $(dir)/src/$(test_dir)/CMakeFiles/$(test_name).dir/ .
+run-valgrind-test-date-check:
+	make run-valgrind-check dir=./$(BUILD_DIR)/tests/unit/date/date_test
 
-generate-gcov-storage:
-	make generate-gcov  dir=../$(BUILD_DIR)  test_dir=storage  test_name=storage test_value=storage output=coverage
+run-valgrind-test-blog-check:
+	make run-valgrind-check dir=./$(BUILD_DIR)/tests/unit/blog/blog_test
 
-generate-lcov:
+run-all-vg-check:
+	make run-valgrind-test-date-check \
+			&& make run-valgrind-test-blog-check
+
+# CODE COVERAGE :
+get-gcov:
+	mkdir $(output) && cd $(output) && gcov $(file) && cp -rf $(path) .
+
+get-gcov-date:
+	make get-gcov output=gcov/date file=../../build/src/date/CMakeFiles/date.dir/date.c.gcno path=../../build/src/date/CMakeFiles/date.dir/.
+
+get-gcov-blog:
+	make get-gcov output=gcov/blog file=../../build/src/storage/CMakeFiles/storage.dir/storage.c.gcno path=../../build/src/storage/CMakeFiles/storage.dir/.
+
+get-gcov-all:
+	mkdir gcov && make get-gcov-date && make get-gcov-blog
+
+get-lcov:
 	lcov --capture --directory $(directory) --output-file $(output_filename).info
 
-generate-lcov-storage:
-	make generate-lcov output_filename=coverage_output/storage_test directory=coverage
+get-lcov-date:
+	mkdir coverage/date && make get-lcov directory=gcov/date output_filename=coverage/date/date
 
-generate-coverage-html:
-	genhtml $(filename).info --output-directory $(directory)
+get-lcov-blog:
+	mkdir coverage/blog && make get-lcov directory=gcov/blog output_filename=coverage/blog/blog
 
-generate-coverage-html-storage:
-	make generate-coverage-html filename=coverage_output/storage_test directory=coverage_output
+get-lcov-all:
+	mkdir coverage && make get-lcov-date && make get-lcov-blog
 
-get-storage-coverage:
-	mkdir coverage \
- 		&& mkdir coverage_output \
-	 		&& make generate-gcov-storage \
- 				&& make generate-lcov-storage \
-      				&& make generate-coverage-html-storage
+generate-html:
+	cd $(dir) && genhtml $(file).info  --output-directory .
+
+generate-html-blog:
+	make generate-html dir=coverage/blog file=blog
+
+generate-html-date:
+	make generate-html dir=coverage/date file=date
+
+generate-html-all:
+	make generate-html-date && make generate-html-blog
 
 get-all-coverage:
-	make get-storage-coverage
-
-valgrind-check:
-	valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --undef-value-errors=no --verbose --log-file=$(filename)  $(directory)
-
-valgrind-check-storage-test:
-	make valgrind-check directory=./build/tests/unit/storage/storage_test filename=valgrind_output/storage_report
-
-valgrind-check-all:
-	mkdir valgrind_output && make valgrind-check-storage-test
-
-
+	make get-gcov-all && make get-lcov-all && make generate-html-all

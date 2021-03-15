@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10.2)
 
-option(test "Build all tests." ON)
+option(tests "Build all tests." ON)
 
 project(techno_iz1 C CXX)
 
@@ -13,10 +13,10 @@ set(CMAKE_C_FLAGS "--coverage")
 add_subdirectory(cmd)
 add_subdirectory(src)
 #
-#if(test)
-#    enable_testing()
+#if(tests)
+    enable_testing()
 #
-#    add_subdirectory(vendor/googletest)
+    add_subdirectory(vendor/googltest)
 #
-#    add_subdirectory(tests)
-#endif(test)
+    add_subdirectory(tests)
+#endif(tests)

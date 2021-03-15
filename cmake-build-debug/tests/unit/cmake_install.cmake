@@ -1,4 +1,4 @@
-# Install script for directory: /home/fillinmar/testNikita/techno-iz1/tests/unit
+# Install script for directory: /home/fillinmar/technoparkC++/techno-ih1/tests/unit
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/fillinmar/testNikita/techno-iz1/cmake-build-debug/tests/unit/storage/cmake_install.cmake")
+  include("/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/tests/unit/date/cmake_install.cmake")
+  include("/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/tests/unit/blog/cmake_install.cmake")
 
 endif()
 

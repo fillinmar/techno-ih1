@@ -15,6 +15,9 @@ Record *create_records(size_t capacity) {
     for (size_t i = 0; i < capacity; ++i) {
         records[i].comments = NULL;
         records[i].marks = NULL;
+        records[i].date = 0 ;
+        records[i].first_month_statistic = 0;
+        // make all char * as NULL
     }
 
     return records;
