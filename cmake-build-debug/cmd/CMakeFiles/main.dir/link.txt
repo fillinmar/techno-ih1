@@ -1,1 +1,1 @@
-/usr/bin/cc --coverage -g   CMakeFiles/main.dir/main.c.o  -o main  ../src/storage/libstorage.a ../src/input_processing/libinput_processing.a 
+/usr/bin/cc --coverage -g   CMakeFiles/main.dir/main.c.o  -o main  ../src/storage/libstorage.a ../src/input_processing/libinput_processing.a ../src/date/libdate.a 

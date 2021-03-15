@@ -101,6 +101,7 @@ cmd/main: cmd/CMakeFiles/main.dir/main.c.o
 cmd/main: cmd/CMakeFiles/main.dir/build.make
 cmd/main: src/storage/libstorage.a
 cmd/main: src/input_processing/libinput_processing.a
+cmd/main: src/date/libdate.a
 cmd/main: cmd/CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable main"
 	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/cmd && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)

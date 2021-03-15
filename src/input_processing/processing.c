@@ -18,13 +18,21 @@ char get_char() {
 };
 
 int get_int() {
-    int n  = 0;
-    scanf("%d", &n);
-    return n;
-
+    char c = '\0';
+    int result = 0;
+    while (c = get_char(), c != EOF && c != '\n') {
+        if (!(c >= '0' && c <= '9')) {
+            char *buf = get_string(); /* Read to the end of the string */
+            if (buf) {
+                free(buf);
+            }
+            return 0;
+        }
+        result = result * 10 + c - '0';
+    }
+    return result;
 };
 
-// Returns NUL on error
 char *get_string() {
     struct buffer {
         char *string;

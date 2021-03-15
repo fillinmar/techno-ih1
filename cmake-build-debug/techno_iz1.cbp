@@ -5,7 +5,7 @@
 		<Option title="techno_iz1"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\cmd\;CMake Files\src\;CMake Files\src\storage\;CMake Files\src\input_processing\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmd\;CMake Files\src\;CMake Files\src\storage\;CMake Files\src\input_processing\;CMake Files\src\date\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug"/>
@@ -46,6 +46,7 @@
 				<Compiler>
 					<Add directory="/home/fillinmar/technoparkC++/techno-ih1/src/storage"/>
 					<Add directory="/home/fillinmar/technoparkC++/techno-ih1/src/input_processing"/>
+					<Add directory="/home/fillinmar/technoparkC++/techno-ih1/src/date"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -70,6 +71,7 @@
 				<Compiler>
 					<Add directory="/home/fillinmar/technoparkC++/techno-ih1/src/storage"/>
 					<Add directory="/home/fillinmar/technoparkC++/techno-ih1/src/input_processing"/>
+					<Add directory="/home/fillinmar/technoparkC++/techno-ih1/src/date"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -177,9 +179,61 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/input_processing/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="date">
+				<Option output="/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/date/libdate.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/date"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fillinmar/technoparkC++/techno-ih1/src/date"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/date/Makefile&quot;  VERBOSE=1 date"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/date/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/date/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/date/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="date/fast">
+				<Option output="/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/date/libdate.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/date"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/fillinmar/technoparkC++/techno-ih1/src/date"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/date/Makefile&quot;  VERBOSE=1 date/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/date/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/date/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/date/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/home/fillinmar/technoparkC++/techno-ih1/cmd/main.c">
 			<Option target="main"/>
+		</Unit>
+		<Unit filename="/home/fillinmar/technoparkC++/techno-ih1/src/date/date.c">
+			<Option target="date"/>
+		</Unit>
+		<Unit filename="/home/fillinmar/technoparkC++/techno-ih1/src/date/date.h">
+			<Option target="date"/>
 		</Unit>
 		<Unit filename="/home/fillinmar/technoparkC++/techno-ih1/src/input_processing/processing.c">
 			<Option target="input_processing"/>
@@ -207,6 +261,9 @@
 		</Unit>
 		<Unit filename="/home/fillinmar/technoparkC++/techno-ih1/src/input_processing/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\input_processing\"/>
+		</Unit>
+		<Unit filename="/home/fillinmar/technoparkC++/techno-ih1/src/date/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\date\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

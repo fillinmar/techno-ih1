@@ -12,12 +12,14 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../src/storage"
   "../src/input_processing"
+  "../src/date"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/storage/CMakeFiles/storage.dir/DependInfo.cmake"
   "/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/input_processing/CMakeFiles/input_processing.dir/DependInfo.cmake"
+  "/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/date/CMakeFiles/date.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

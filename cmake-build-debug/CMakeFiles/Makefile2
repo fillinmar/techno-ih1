@@ -114,20 +114,41 @@ cmd/clean: cmd/CMakeFiles/main.dir/clean
 # Recursive "all" directory target.
 src/all: src/storage/all
 src/all: src/input_processing/all
+src/all: src/date/all
 
 .PHONY : src/all
 
 # Recursive "preinstall" directory target.
 src/preinstall: src/storage/preinstall
 src/preinstall: src/input_processing/preinstall
+src/preinstall: src/date/preinstall
 
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
 src/clean: src/storage/clean
 src/clean: src/input_processing/clean
+src/clean: src/date/clean
 
 .PHONY : src/clean
+
+#=============================================================================
+# Directory level rules for directory src/date
+
+# Recursive "all" directory target.
+src/date/all: src/date/CMakeFiles/date.dir/all
+
+.PHONY : src/date/all
+
+# Recursive "preinstall" directory target.
+src/date/preinstall:
+
+.PHONY : src/date/preinstall
+
+# Recursive "clean" directory target.
+src/date/clean: src/date/CMakeFiles/date.dir/clean
+
+.PHONY : src/date/clean
 
 #=============================================================================
 # Directory level rules for directory src/input_processing
@@ -171,14 +192,15 @@ src/storage/clean: src/storage/CMakeFiles/storage.dir/clean
 # All Build rule for target.
 cmd/CMakeFiles/main.dir/all: src/storage/CMakeFiles/storage.dir/all
 cmd/CMakeFiles/main.dir/all: src/input_processing/CMakeFiles/input_processing.dir/all
+cmd/CMakeFiles/main.dir/all: src/date/CMakeFiles/date.dir/all
 	$(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target main"
 .PHONY : cmd/CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 cmd/CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles 0
 .PHONY : cmd/CMakeFiles/main.dir/rule
@@ -200,7 +222,7 @@ cmd/CMakeFiles/main.dir/clean:
 src/storage/CMakeFiles/storage.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/storage/CMakeFiles/storage.dir/build.make src/storage/CMakeFiles/storage.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/storage/CMakeFiles/storage.dir/build.make src/storage/CMakeFiles/storage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target storage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target storage"
 .PHONY : src/storage/CMakeFiles/storage.dir/all
 
 # Build rule for subdir invocation for target.
@@ -227,7 +249,7 @@ src/storage/CMakeFiles/storage.dir/clean:
 src/input_processing/CMakeFiles/input_processing.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/input_processing/CMakeFiles/input_processing.dir/build.make src/input_processing/CMakeFiles/input_processing.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/input_processing/CMakeFiles/input_processing.dir/build.make src/input_processing/CMakeFiles/input_processing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target input_processing"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target input_processing"
 .PHONY : src/input_processing/CMakeFiles/input_processing.dir/all
 
 # Build rule for subdir invocation for target.
@@ -246,6 +268,33 @@ input_processing: src/input_processing/CMakeFiles/input_processing.dir/rule
 src/input_processing/CMakeFiles/input_processing.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/input_processing/CMakeFiles/input_processing.dir/build.make src/input_processing/CMakeFiles/input_processing.dir/clean
 .PHONY : src/input_processing/CMakeFiles/input_processing.dir/clean
+
+#=============================================================================
+# Target rules for target src/date/CMakeFiles/date.dir
+
+# All Build rule for target.
+src/date/CMakeFiles/date.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/date/CMakeFiles/date.dir/build.make src/date/CMakeFiles/date.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/date/CMakeFiles/date.dir/build.make src/date/CMakeFiles/date.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target date"
+.PHONY : src/date/CMakeFiles/date.dir/all
+
+# Build rule for subdir invocation for target.
+src/date/CMakeFiles/date.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/date/CMakeFiles/date.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles 0
+.PHONY : src/date/CMakeFiles/date.dir/rule
+
+# Convenience name for target.
+date: src/date/CMakeFiles/date.dir/rule
+
+.PHONY : date
+
+# clean rule for target.
+src/date/CMakeFiles/date.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/date/CMakeFiles/date.dir/build.make src/date/CMakeFiles/date.dir/clean
+.PHONY : src/date/CMakeFiles/date.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

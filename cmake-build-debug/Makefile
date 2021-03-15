@@ -169,6 +169,19 @@ input_processing/fast:
 	$(MAKE) $(MAKESILENT) -f src/input_processing/CMakeFiles/input_processing.dir/build.make src/input_processing/CMakeFiles/input_processing.dir/build
 .PHONY : input_processing/fast
 
+#=============================================================================
+# Target rules for targets named date
+
+# Build rule for target.
+date: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 date
+.PHONY : date
+
+# fast build rule for target.
+date/fast:
+	$(MAKE) $(MAKESILENT) -f src/date/CMakeFiles/date.dir/build.make src/date/CMakeFiles/date.dir/build
+.PHONY : date/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -177,6 +190,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... date"
 	@echo "... input_processing"
 	@echo "... main"
 	@echo "... storage"

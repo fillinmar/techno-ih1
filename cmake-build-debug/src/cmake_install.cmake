@@ -41,6 +41,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/storage/cmake_install.cmake")
   include("/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/input_processing/cmake_install.cmake")
+  include("/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/date/cmake_install.cmake")
 
 endif()
 

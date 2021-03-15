@@ -9,46 +9,49 @@
 #include <stdio.h>
 
 typedef struct {
+    char *content;
+    int date; // format YYYY:MM:DD
+} Comments;
+
+typedef struct {
+    int marks;
+    int date; // format YYYY:MM:DD
+} Marks;
+
+typedef struct {
     char *name;
     char *content;
     char *tags;
-    int comments; // numbers in the first month
-    int marks; // the same
-    char *date;
-} Metadata;
+    Comments *comments;
+    Marks *marks;
+    int date; // format YYYY:MM:DD
+    int first_month_statistic;
 
-
-typedef struct {
-    size_t size;
-    size_t capacity;
-
-    Metadata *data;
-} Element;
+} Record;
 
 typedef struct {
-    size_t size_multiplier;
+    Record *records;
     size_t size;
+    size_t size_mult;
     size_t capacity;
-    size_t load_maximum;
 
-    size_t hash_base;
-    size_t step;
+} Blog;
 
-    Element *map;
-} Storage;
-Element *create_map(size_t capacity);
+Record *create_records(size_t capacity);
 
-size_t hash(const char *key, Storage *st);
 
-bool resize(Storage *st);
+Blog *create_blog(size_t capacity);
 
-bool add(Metadata *element, Storage *st);
+size_t find_place(Blog *bl, Record *rec);
 
-void print_values(Storage *st);
+void shift_records(Blog *bl, size_t n);
 
-Storage *create_storage(size_t size_multiplier, size_t size, size_t capacity, size_t load_maximum, size_t hash_base,
-                        size_t step);
+bool resize_records(Blog *bl);
 
-void free_storage(Storage **st);
+bool insert_element(Blog *bl, Record *rec);
+
+void print_records(Blog *bl, size_t n);
+
+void free_blog(Blog **bl);
 
 #endif //TECHNO_IZ1_STORAGE_H

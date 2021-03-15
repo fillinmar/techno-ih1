@@ -6,175 +6,126 @@
 #include <stdlib.h>
 #include <string.h>
 
-Element *create_map(size_t capacity) {
-    Element *map = (Element *) calloc(capacity, sizeof(Element));
-    if (map == NULL) {
+Record *create_records(size_t capacity) {
+    Record *records = (Record *) calloc(sizeof(Record), capacity);
+    if (!records) {
         return NULL;
     }
 
     for (size_t i = 0; i < capacity; ++i) {
-        map[i].data = NULL;
-        map[i].capacity = 0;
-        map[i].size = 0;
-    }
-    return map;
-};
-
-size_t hash(const char *key, Storage *st) {
-    size_t place = 0;
-    // because multiplying by 0 equals 0
-    size_t multiply = 1;
-
-    for (size_t i = 0; i < strlen(key); ++i) {
-        place += multiply * key[i];
-        multiply *= st->hash_base;
+        records[i].comments = NULL;
+        records[i].marks = NULL;
     }
 
-    place %= st->capacity;
-
-    return place;
+    return records;
 };
 
-bool resize(Storage *st) {
-    size_t old_capacity = st->capacity;
-    st->capacity = st->capacity * st->size_multiplier;
-    Element *new_map = create_map(st->capacity);
 
-    if (new_map == NULL) {
+Blog *create_blog(size_t capacity) {
+    Record *records = create_records(capacity);
+    if (records == NULL) {
+        return NULL;
+    }
+
+    Blog *bl = (Blog *) malloc(sizeof(Blog));
+    if (!bl) {
+        return NULL;
+    }
+
+    bl->size = 0;
+    bl->size_mult = 0;
+    bl->capacity = capacity;
+    bl->records = records;
+
+    return bl;
+};
+
+size_t find_place(Blog *bl, Record *rec) {
+    size_t place = bl->size;
+
+    while (rec->first_month_statistic < bl[place].records->first_month_statistic) {
+        place--;
+    }
+    // because we want to add element after less found
+    return place + 1;
+};
+
+void shift_records(Blog *bl, size_t n) {
+    for (size_t i = bl->size + 1; i > n; i--) {
+        bl[i].records = bl[i - 1].records;
+    }
+};
+
+bool resize_records(Blog *bl) {
+    bl->capacity *= bl->size_mult;
+
+    bl->records = (Record *) realloc(bl->records, bl->capacity * sizeof(Record));
+    if (!bl->records)
         return false;
-    }
 
-    if (st->map == NULL) {
-        st->map = new_map;
+    return true;
+};
+
+bool insert_element(Blog *bl, Record *rec) {
+    if (bl->size == 0) {
+        bl->records[bl->size++] = *rec;
         return true;
     }
 
-    for (size_t i = 0; i < old_capacity; ++i) {
-        if (st->map[i].data == NULL) {
-            continue;
-        }
-
-        // if pointer is not NULL -> then there is more then 0 element
-        size_t place = hash(st->map[i].data[0].name, st);
-        new_map[place] = st->map[i];
-    }
-    // remove old map and write new map
-    free(st->map);
-    st->map = new_map;
-
-    return true;
-};
-
-bool add(Metadata *element, Storage *st) {
-    st->size++;
-    if (st->size / st->capacity >= st->load_maximum) {
-        if (!resize(st)) {
+    if (bl->size + 1 > bl->capacity)
+        if (!resize_records(bl))
             return false;
-        };
-    };
 
-    size_t place = hash(element->name, st);
-    // if there is any elements in key and keys are not equal -> increase place to add
-    while (st->map[place].data != NULL && strcmp(st->map[place].data[0].name, element->name) != 0) {
-        place = (place + st->step) % st->capacity;
-    }
-
-    if (st->map[place].data == NULL) {
-        st->map[place].data = calloc(st->size_multiplier, sizeof(Metadata));
-        st->map[place].size = 0;
-        st->map[place].capacity = st->size_multiplier;
-    }
-
-    if (st->map[place].size >= st->map[place].capacity) {
-        st->map[place].data = (Metadata *) realloc(st->map[place].data,
-                                                   st->map[place].capacity * st->size_multiplier * sizeof(Metadata));
-        st->map[place].capacity *= st->size_multiplier;
-    }
-
-    if (st->map[place].data == NULL) {
-        return false;
-    }
-
-    st->map[place].data[st->map[place].size] = *element;
-    st->map[place].size++;
+    size_t place = find_place(bl, rec);
+    shift_records(bl, place);
+    bl->records[place] = *rec;
 
     return true;
 };
 
-void print_values(Storage *st) {
-    printf("output:\n");
-    printf("{\n");
+void print_records(Blog *bl, size_t n) {
+    if (n > bl->size)
+        printf("Sorry not enough records\n");
 
-    for (size_t i = 0; i < st->capacity; ++i) {
-        if (st->map[i].data == NULL) {
-            continue;
-        }
-        printf("\t{\n");
-        printf("\t\tType: %s;\n", st->map[i].data[0].name);
-
-        printf("\t\tElements:[\n");
-        for (size_t j = 0; j < st->map[i].size; ++j) {
-            printf("\t\t\t{\n");
-            printf("\t\t\t\tName: %s;\n", st->map[i].data[j].content);
-            printf("\t\t\t\tTags: %s;\n", st->map[i].data[j].tags);
-            printf("\t\t\t\tComments: %d;\n", st->map[i].data[j].comments);
-            printf("\t\t\t\tMarks: %d;\n", st->map[i].data[j].marks);
-            printf("\t\t\t\tDate: %s;\n", st->map[i].data[j].date);
-            printf("\t\t\t};\n");
-        }
-
-        printf("\t\t];\n");
-
-        printf("\t};\n");
-
+    printf("Popular records :\n");
+    for (int i = 0; i < n && i < bl->size; i++) {
+        printf("\tnumber - %d", i + 1);
+        printf("\t\t Name - %s\n", bl->records[i].name);
+        printf("\t\t Tags - %s\n", bl->records[i].tags);
+        printf("\t\t Content - %s\n", bl->records[i].content);
     }
-
-    printf("};");
 };
 
-
-Storage *create_storage(
-        size_t size_multiplier, size_t size,
-        size_t capacity, size_t load_maximum,
-
-        size_t hash_base, size_t step) {
-    Element *map = create_map(capacity);
-    if (map == NULL) {
-        return NULL;
-    }
-    Storage *st = malloc(sizeof(Storage));
-    st->size_multiplier = size_multiplier;
-    st->size = size;
-    st->capacity = capacity;
-    st->load_maximum = load_maximum;
-    st->hash_base = hash_base;
-    st->map = map;
-    st->step = step;
-
-    return st;
-}
-
-
-void free_storage(Storage **st) {
-    if (*st == NULL) {
+void free_blog(Blog **bl) {
+    if (*bl == NULL) {
         return;
     }
 
-    if ((*st)->map == NULL) {
-        free(*st);
-        (*st) = NULL;
+    if ((*bl)->records == NULL) {
+        free(*bl);
+        (*bl) = NULL;
         return;
     }
 
-    for (size_t i = 0; i < (*st)->capacity; ++i) {
-        if ((*st)->map[i].data == NULL) {
-            continue;
+    for (size_t i = 0; i < (*bl)->capacity; ++i) {
+        if ((*bl)->records[i].name) {
+            free((*bl)->records[i].name);
         }
-
-        free((*st)->map[i].data);
+        if ((*bl)->records[i].content) {
+            free((*bl)->records[i].content);
+        }
+        if ((*bl)->records[i].tags) {
+            free((*bl)->records[i].tags);
+        }
+        if ((*bl)->records[i].comments != NULL) {
+            free((*bl)->records[i].comments);
+        }
+        if ((*bl)->records[i].marks != NULL) {
+            free((*bl)->records[i].marks);
+        }
     }
 
-    free((*st)->map);
-    free(*st);
-    (*st) = NULL;
+    free((*bl)->records);
+    free(*bl);
+    (*bl) = NULL;
 }

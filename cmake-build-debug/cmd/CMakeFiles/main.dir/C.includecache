@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+../src/date/date.h
+stdbool.h
+-
+stdio.h
+-
+
 ../src/input_processing/processing.h
 
 ../src/storage/storage.h
@@ -19,8 +25,12 @@ processing.h
 /home/fillinmar/technoparkC++/techno-ih1/cmd/processing.h
 storage.h
 /home/fillinmar/technoparkC++/techno-ih1/cmd/storage.h
+date.h
+/home/fillinmar/technoparkC++/techno-ih1/cmd/date.h
 stdio.h
 -
 string.h
+-
+malloc.h
 -
 

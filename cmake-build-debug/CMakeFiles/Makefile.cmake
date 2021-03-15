@@ -13,6 +13,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.17.5/CMakeSystem.cmake"
   "../cmd/CMakeLists.txt"
   "../src/CMakeLists.txt"
+  "../src/date/CMakeLists.txt"
   "../src/input_processing/CMakeLists.txt"
   "../src/storage/CMakeLists.txt"
   "/snap/clion/139/bin/cmake/linux/share/cmake-3.17/Modules/CMakeCInformation.cmake"
@@ -52,6 +53,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/storage/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/input_processing/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/date/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -59,4 +61,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "cmd/CMakeFiles/main.dir/DependInfo.cmake"
   "src/storage/CMakeFiles/storage.dir/DependInfo.cmake"
   "src/input_processing/CMakeFiles/input_processing.dir/DependInfo.cmake"
+  "src/date/CMakeFiles/date.dir/DependInfo.cmake"
   )
