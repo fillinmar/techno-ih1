@@ -1,4 +1,4 @@
-name: CI
+name: MY CUSTOM NAME
 
 on:
   push:
