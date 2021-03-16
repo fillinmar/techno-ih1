@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="techno_iz1" targetName="gtest" />
+      <config projectName="techno_iz1" targetName="date_test" />
+      <config projectName="techno_iz1" targetName="gmock_main" />
+      <config projectName="techno_iz1" targetName="main" />
+      <config projectName="techno_iz1" targetName="gtest_main" />
+      <config projectName="techno_iz1" targetName="gmock" />
+      <config projectName="techno_iz1" targetName="date" />
+      <config projectName="techno_iz1" targetName="storage" />
+      <config projectName="techno_iz1" targetName="input_processing" />
+      <config projectName="techno_iz1" targetName="blog_test" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5ea912dc-646c-4d89-bf2e-0526981f28ad" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmd/CMakeFiles/main.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmd/CMakeFiles/main.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/date/CMakeFiles/date.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/date/CMakeFiles/date.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/date/CMakeFiles/date.dir/date.c.gcno" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/date/CMakeFiles/date.dir/date.c.gcno" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/date/CMakeFiles/date.dir/date.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/date/CMakeFiles/date.dir/date.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/date/libdate.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/date/libdate.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/input_processing/CMakeFiles/input_processing.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/input_processing/CMakeFiles/input_processing.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/storage/CMakeFiles/storage.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/storage/CMakeFiles/storage.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/storage/CMakeFiles/storage.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/storage/CMakeFiles/storage.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/storage/CMakeFiles/storage.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/storage/CMakeFiles/storage.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/storage/CMakeFiles/storage.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/storage/CMakeFiles/storage.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/storage/CMakeFiles/storage.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/storage/CMakeFiles/storage.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/storage/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/storage/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/techno_iz1.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/techno_iz1.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/date/date.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/date.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/date/date.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/date/date.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/storage.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/blog.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/storage.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/blog.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/blog/blog_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/blog/blog_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/date/date_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/date/date_test.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1pl6hJmrwRYY0NV2XSe8zQc9k3Q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.advertisement.text.has.clang-format" value="true" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="ctest.advertisement.all.test.configuration.is.created" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RunManager" selected="Google Test.ADD_RECORD.RESIZE_RECORDS">
+    <configuration name="ADD_RECORD.INSERT_ONE_ELEMENT_TO_EMPTY_BLOG" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="techno_iz1" TARGET_NAME="blog_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="techno_iz1" RUN_TARGET_NAME="blog_test" TEST_CLASS="ADD_RECORD" TEST_METHOD="INSERT_ONE_ELEMENT_TO_EMPTY_BLOG" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ADD_RECORD.RESIZE_RECORDS" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="techno_iz1" TARGET_NAME="blog_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="techno_iz1" RUN_TARGET_NAME="blog_test" TEST_CLASS="ADD_RECORD" TEST_METHOD="RESIZE_RECORDS" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="INITIALIZE.CREATE_BLOG" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="techno_iz1" TARGET_NAME="blog_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="techno_iz1" RUN_TARGET_NAME="blog_test" TEST_CLASS="INITIALIZE" TEST_METHOD="CREATE_BLOG" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="INITIALIZE.CREATE_RECORDS" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="techno_iz1" TARGET_NAME="blog_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="techno_iz1" RUN_TARGET_NAME="blog_test" TEST_CLASS="INITIALIZE" TEST_METHOD="CREATE_RECORDS" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="blog_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="techno_iz1" TARGET_NAME="blog_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="techno_iz1" RUN_TARGET_NAME="blog_test" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="date_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="techno_iz1" TARGET_NAME="date_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="techno_iz1" RUN_TARGET_NAME="date_test" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="blog_test" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="techno_iz1" TARGET_NAME="blog_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="techno_iz1" RUN_TARGET_NAME="blog_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="date" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="techno_iz1" TARGET_NAME="date" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="techno_iz1" TARGET_NAME="gmock" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="techno_iz1" TARGET_NAME="gmock_main" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="techno_iz1" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="techno_iz1" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="input_processing" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="techno_iz1" TARGET_NAME="input_processing" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="techno_iz1" TARGET_NAME="main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="techno_iz1" RUN_TARGET_NAME="main">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="storage" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="techno_iz1" TARGET_NAME="storage" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All CTest" type="CTestRunConfiguration" factoryName="CTestRun" PROGRAM_PARAMS="--extra-verbose" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$CMakeCurrentGenerationDir$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$CTestCurrentExecutableName$" EXPLICIT_BUILD_TARGET_NAME="all" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.main" />
+      <item itemvalue="CMake Application.date" />
+      <item itemvalue="CMake Application.input_processing" />
+      <item itemvalue="CMake Application.storage" />
+      <item itemvalue="CMake Application.gmock" />
+      <item itemvalue="CMake Application.gmock_main" />
+      <item itemvalue="CMake Application.gtest" />
+      <item itemvalue="CMake Application.gtest_main" />
+      <item itemvalue="CMake Application.blog_test" />
+      <item itemvalue="CTest Application.All CTest" />
+      <item itemvalue="Google Test.blog_test" />
+      <item itemvalue="Google Test.date_test" />
+      <item itemvalue="Google Test.ADD_RECORD.INSERT_ONE_ELEMENT_TO_EMPTY_BLOG" />
+      <item itemvalue="Google Test.INITIALIZE.CREATE_RECORDS" />
+      <item itemvalue="Google Test.INITIALIZE.CREATE_BLOG" />
+      <item itemvalue="Google Test.ADD_RECORD.RESIZE_RECORDS" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Google Test.ADD_RECORD.RESIZE_RECORDS" />
+        <item itemvalue="Google Test.INITIALIZE.CREATE_BLOG" />
+        <item itemvalue="Google Test.INITIALIZE.CREATE_RECORDS" />
+        <item itemvalue="CMake Application.blog_test" />
+        <item itemvalue="Google Test.ADD_RECORD.INSERT_ONE_ELEMENT_TO_EMPTY_BLOG" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ea912dc-646c-4d89-bf2e-0526981f28ad" name="Default Changelist" comment="" />
+      <created>1615745449869</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615745449869</updated>
+      <workItem from="1615745452324" duration="3034000" />
+      <workItem from="1615750052421" duration="8418000" />
+      <workItem from="1615759489076" duration="516000" />
+      <workItem from="1615799768615" duration="13908000" />
+      <workItem from="1615819399999" duration="599000" />
+      <workItem from="1615835550286" duration="7000" />
+      <workItem from="1615886156273" duration="18504000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="bl-&gt;records[1]" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
