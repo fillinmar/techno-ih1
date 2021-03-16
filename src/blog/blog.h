@@ -2,8 +2,8 @@
 // Created by fillinmar on 14.03.2021.
 //
 
-#ifndef TECHNO_IZ1_STORAGE_H
-#define TECHNO_IZ1_STORAGE_H
+#ifndef TECHNO_IZ1_BLOG_H
+#define TECHNO_IZ1_BLOG_H
 
 #include <stdbool.h>
 #include <stdio.h>
@@ -40,7 +40,7 @@ typedef struct {
 Record *create_records(size_t capacity);
 
 
-Blog *create_blog(size_t capacity);
+Blog *create_blog(size_t capacity, size_t size_mult);
 
 size_t find_place(Blog *bl, Record *rec);
 
@@ -54,4 +54,4 @@ void print_records(Blog *bl, size_t n);
 
 void free_blog(Blog **bl);
 
-#endif //TECHNO_IZ1_STORAGE_H
+#endif //TECHNO_IZ1_BLOG_H

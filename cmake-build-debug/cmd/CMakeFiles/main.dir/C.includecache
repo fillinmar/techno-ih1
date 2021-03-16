@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/date/date.h
+stdbool.h
+-
+stdio.h
+-
+
+../src/input_processing/processing.h
+
+../src/storage/blog.h
+stdbool.h
+-
+stdio.h
+-
+
+/home/fillinmar/technoparkC++/techno-ih1/cmd/main.c
+processing.h
+/home/fillinmar/technoparkC++/techno-ih1/cmd/processing.h
+blog.h
+/home/fillinmar/technoparkC++/techno-ih1/cmd/blog.h
+date.h
+/home/fillinmar/technoparkC++/techno-ih1/cmd/date.h
+stdio.h
+-
+string.h
+-
+malloc.h
+-
+

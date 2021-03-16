@@ -202,32 +202,32 @@ storage/fast:
 	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/storage/CMakeFiles/storage.dir/build.make src/storage/CMakeFiles/storage.dir/build
 .PHONY : storage/fast
 
-storage.o: storage.c.o
+blog.o: blog.c.o
 
-.PHONY : storage.o
+.PHONY : blog.o
 
 # target to build an object file
-storage.c.o:
-	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/storage/CMakeFiles/storage.dir/build.make src/storage/CMakeFiles/storage.dir/storage.c.o
-.PHONY : storage.c.o
+blog.c.o:
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/storage/CMakeFiles/storage.dir/build.make src/storage/CMakeFiles/storage.dir/blog.c.o
+.PHONY : blog.c.o
 
-storage.i: storage.c.i
+blog.i: blog.c.i
 
-.PHONY : storage.i
+.PHONY : blog.i
 
 # target to preprocess a source file
-storage.c.i:
-	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/storage/CMakeFiles/storage.dir/build.make src/storage/CMakeFiles/storage.dir/storage.c.i
-.PHONY : storage.c.i
+blog.c.i:
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/storage/CMakeFiles/storage.dir/build.make src/storage/CMakeFiles/storage.dir/blog.c.i
+.PHONY : blog.c.i
 
-storage.s: storage.c.s
+blog.s: blog.c.s
 
-.PHONY : storage.s
+.PHONY : blog.s
 
 # target to generate assembly for a file
-storage.c.s:
-	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/storage/CMakeFiles/storage.dir/build.make src/storage/CMakeFiles/storage.dir/storage.c.s
-.PHONY : storage.c.s
+blog.c.s:
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/storage/CMakeFiles/storage.dir/build.make src/storage/CMakeFiles/storage.dir/blog.c.s
+.PHONY : blog.c.s
 
 # Help Target
 help:
@@ -243,9 +243,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... storage"
-	@echo "... storage.o"
-	@echo "... storage.i"
-	@echo "... storage.s"
+	@echo "... blog.o"
+	@echo "... blog.i"
+	@echo "... blog.s"
 .PHONY : help
 
 

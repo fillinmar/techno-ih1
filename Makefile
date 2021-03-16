@@ -36,7 +36,7 @@ get-gcov-date:
 	make get-gcov output=gcov/date file=../../build/src/date/CMakeFiles/date.dir/date.c.gcno path=../../build/src/date/CMakeFiles/date.dir/.
 
 get-gcov-blog:
-	make get-gcov output=gcov/blog file=../../build/src/storage/CMakeFiles/storage.dir/storage.c.gcno path=../../build/src/storage/CMakeFiles/storage.dir/.
+	make get-gcov output=gcov/blog file=../../build/src/blog/CMakeFiles/blog.dir/blog.c.gcno path=../../build/src/blog/CMakeFiles/blog.dir/.
 
 get-gcov-all:
 	mkdir gcov && make get-gcov-date && make get-gcov-blog

@@ -114,7 +114,7 @@ blog_test_EXTERNAL_OBJECTS =
 tests/unit/blog/blog_test: tests/unit/blog/CMakeFiles/blog_test.dir/blog_test.cpp.o
 tests/unit/blog/blog_test: tests/unit/blog/CMakeFiles/blog_test.dir/main.cpp.o
 tests/unit/blog/blog_test: tests/unit/blog/CMakeFiles/blog_test.dir/build.make
-tests/unit/blog/blog_test: src/storage/libstorage.a
+tests/unit/blog/blog_test: src/blog/libstorage.a
 tests/unit/blog/blog_test: lib/libgtestd.a
 tests/unit/blog/blog_test: tests/unit/blog/CMakeFiles/blog_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable blog_test"

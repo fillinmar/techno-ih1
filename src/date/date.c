@@ -4,8 +4,6 @@
 
 #include "date.h"
 #include <stdbool.h>
-#include <stdlib.h>
-#include <string.h>
 
 int get_next_month(int date) {
     int day = date % 100;
@@ -30,7 +28,7 @@ bool check_input_date(int date) {
 };
 
 bool check_month_get(int next_date_of_record, int date_of_record, int date_of_action) {
-    if (date_of_record <= date_of_action && date_of_action >= next_date_of_record)
+    if (date_of_record <= date_of_action && date_of_action <= next_date_of_record)
         return true;
     return false;
 }

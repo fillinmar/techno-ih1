@@ -1,4 +1,4 @@
-add_subdirectory(storage)
+add_subdirectory(blog)
 
 add_subdirectory(input_processing)
 

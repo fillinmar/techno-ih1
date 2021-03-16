@@ -6,5 +6,5 @@ C_FLAGS = --coverage -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/fillinmar/technoparkC++/techno-ih1/src/storage -I/home/fillinmar/technoparkC++/techno-ih1/src/input_processing -I/home/fillinmar/technoparkC++/techno-ih1/src/date 
+C_INCLUDES = -I/home/fillinmar/technoparkC++/techno-ih1/src/blog -I/home/fillinmar/technoparkC++/techno-ih1/src/input_processing -I/home/fillinmar/technoparkC++/techno-ih1/src/date 
 

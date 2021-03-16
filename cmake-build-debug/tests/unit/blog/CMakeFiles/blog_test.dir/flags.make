@@ -6,5 +6,5 @@ CXX_FLAGS = -Wall -Wno-unknown-pragmas -Wno-sign-compare -Woverloaded-virtual -W
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/fillinmar/technoparkC++/techno-ih1/src/storage -isystem /home/fillinmar/technoparkC++/techno-ih1/vendor/googltest/googletest/include -isystem /home/fillinmar/technoparkC++/techno-ih1/vendor/googltest/googletest 
+CXX_INCLUDES = -I/home/fillinmar/technoparkC++/techno-ih1/src/blog -isystem /home/fillinmar/technoparkC++/techno-ih1/vendor/googltest/googletest/include -isystem /home/fillinmar/technoparkC++/techno-ih1/vendor/googltest/googletest 
 

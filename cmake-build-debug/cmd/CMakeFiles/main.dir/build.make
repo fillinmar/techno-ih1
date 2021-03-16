@@ -99,7 +99,7 @@ main_EXTERNAL_OBJECTS =
 
 cmd/main: cmd/CMakeFiles/main.dir/main.c.o
 cmd/main: cmd/CMakeFiles/main.dir/build.make
-cmd/main: src/storage/libstorage.a
+cmd/main: src/blog/libstorage.a
 cmd/main: src/input_processing/libinput_processing.a
 cmd/main: src/date/libdate.a
 cmd/main: cmd/CMakeFiles/main.dir/link.txt

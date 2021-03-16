@@ -2,7 +2,7 @@
 // Created by fillinmar on 11.03.2021.
 //
 #include "processing.h"
-#include "storage.h"
+#include "blog.h"
 #include "date.h"
 #include <stdio.h>
 #include <string.h>
@@ -18,9 +18,9 @@ const char *add_extra = "add";
 const char *stop = "stop";
 
 int main() {
-    Blog *bl = create_blog(capacity);
+    Blog *bl = create_blog(capacity, size);
     if (bl == NULL) {
-        printf("\nfailed to allocate memory; stopping execution...");
+        printf("\n Sorry cannot allocate memory");
     }
     char *cmd = "menu";
 
@@ -49,7 +49,7 @@ int main() {
             printf("Input name of blog: ");
             char *name = get_string();
             if (name == NULL) {
-                printf("\nfailed to allocate memory; stopping execution...");
+                printf("\n Sorry cannot allocate memory");
                 break;
             }
 
@@ -57,7 +57,7 @@ int main() {
             char *content = get_string();
 
             if (content == NULL) {
-                printf("\nfailed to allocate memory; stopping execution...");
+                printf(" Sorry cannot allocate memory");
                 break;
             }
 
@@ -65,7 +65,7 @@ int main() {
             char *tags = get_string();
 
             if (tags == NULL) {
-                printf("\nfailed to allocate memory; stopping execution...");
+                printf("\n Sorry cannot allocate memory");
                 break;
             }
 
@@ -96,7 +96,7 @@ int main() {
                 comments[i].content = get_string();
                 printf("Input date of comment number %d: ", i + 1);
                 int date_comment = get_int();
-                if (!check_month_get(next_month_record, date, date_comment)) {
+                if (check_month_get(next_month_record, date, date_comment)) {
                     first_month_statistic++;
                 }
             }
@@ -117,7 +117,7 @@ int main() {
                 marks[i].marks = get_int();
                 printf("Input date of mark number %d: ", i + 1);
                 int date_mark = get_int();
-                if (!check_month_get(next_month_record, date, date_mark)) {
+                if (check_month_get(next_month_record, date, date_mark)) {
                     first_month_statistic++;
                 }
             }

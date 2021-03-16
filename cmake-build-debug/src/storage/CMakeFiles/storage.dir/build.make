@@ -77,27 +77,27 @@ include src/storage/CMakeFiles/storage.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/storage/CMakeFiles/storage.dir/flags.make
 
-src/storage/CMakeFiles/storage.dir/storage.c.o: src/storage/CMakeFiles/storage.dir/flags.make
-src/storage/CMakeFiles/storage.dir/storage.c.o: ../src/storage/storage.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/storage/CMakeFiles/storage.dir/storage.c.o"
-	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/storage && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/storage.dir/storage.c.o   -c /home/fillinmar/technoparkC++/techno-ih1/src/storage/storage.c
+src/storage/CMakeFiles/storage.dir/blog.c.o: src/storage/CMakeFiles/storage.dir/flags.make
+src/storage/CMakeFiles/storage.dir/blog.c.o: ../src/storage/blog.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/storage/CMakeFiles/storage.dir/blog.c.o"
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/storage && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/storage.dir/blog.c.o   -c /home/fillinmar/technoparkC++/techno-ih1/src/storage/blog.c
 
-src/storage/CMakeFiles/storage.dir/storage.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/storage.dir/storage.c.i"
-	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/storage && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fillinmar/technoparkC++/techno-ih1/src/storage/storage.c > CMakeFiles/storage.dir/storage.c.i
+src/storage/CMakeFiles/storage.dir/blog.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/storage.dir/blog.c.i"
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/storage && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/fillinmar/technoparkC++/techno-ih1/src/storage/blog.c > CMakeFiles/storage.dir/blog.c.i
 
-src/storage/CMakeFiles/storage.dir/storage.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/storage.dir/storage.c.s"
-	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/storage && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fillinmar/technoparkC++/techno-ih1/src/storage/storage.c -o CMakeFiles/storage.dir/storage.c.s
+src/storage/CMakeFiles/storage.dir/blog.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/storage.dir/blog.c.s"
+	cd /home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/storage && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/fillinmar/technoparkC++/techno-ih1/src/storage/blog.c -o CMakeFiles/storage.dir/blog.c.s
 
 # Object files for target storage
 storage_OBJECTS = \
-"CMakeFiles/storage.dir/storage.c.o"
+"CMakeFiles/storage.dir/blog.c.o"
 
 # External object files for target storage
 storage_EXTERNAL_OBJECTS =
 
-src/storage/libstorage.a: src/storage/CMakeFiles/storage.dir/storage.c.o
+src/storage/libstorage.a: src/storage/CMakeFiles/storage.dir/blog.c.o
 src/storage/libstorage.a: src/storage/CMakeFiles/storage.dir/build.make
 src/storage/libstorage.a: src/storage/CMakeFiles/storage.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libstorage.a"

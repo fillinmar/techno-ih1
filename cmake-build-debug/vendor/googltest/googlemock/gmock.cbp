@@ -5,7 +5,7 @@
 		<Option title="gmock"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\vendor\;CMake Files\vendor\googltest\;CMake Files\vendor\googltest\googlemock\;CMake Files\vendor\googltest\googlemock\cmake\;CMake Files\vendor\googltest\googletest\;CMake Files\vendor\googltest\googletest\cmake\;CMake Files\cmd\;CMake Files\src\;CMake Files\src\storage\;CMake Files\src\input_processing\;CMake Files\src\date\;CMake Files\tests\;CMake Files\tests\unit\;CMake Files\tests\unit\date\;CMake Files\tests\unit\blog\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\vendor\;CMake Files\vendor\googltest\;CMake Files\vendor\googltest\googlemock\;CMake Files\vendor\googltest\googlemock\cmake\;CMake Files\vendor\googltest\googletest\;CMake Files\vendor\googltest\googletest\cmake\;CMake Files\cmd\;CMake Files\src\;CMake Files\src\blog\;CMake Files\src\input_processing\;CMake Files\src\date\;CMake Files\tests\;CMake Files\tests\unit\;CMake Files\tests\unit\date\;CMake Files\tests\unit\blog\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/vendor/googltest/googlemock"/>
@@ -266,8 +266,8 @@
 		<Unit filename="/home/fillinmar/technoparkC++/techno-ih1/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/technoparkC++/techno-ih1/src/storage/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\src\storage\"/>
+		<Unit filename="/home/fillinmar/technoparkC++/techno-ih1/src/blog/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\blog\"/>
 		</Unit>
 		<Unit filename="/home/fillinmar/technoparkC++/techno-ih1/src/input_processing/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\input_processing\"/>

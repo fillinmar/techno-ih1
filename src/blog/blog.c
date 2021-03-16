@@ -1,7 +1,7 @@
 //
 // Created by fillinmar on 14.03.2021.
 //
-#include "storage.h"
+#include "blog.h"
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
@@ -17,14 +17,16 @@ Record *create_records(size_t capacity) {
         records[i].marks = NULL;
         records[i].date = 0 ;
         records[i].first_month_statistic = 0;
-        // make all char * as NULL
+        records[i].name = NULL;
+        records[i].content =NULL;
+        records[i].tags = NULL;
     }
 
     return records;
 };
 
 
-Blog *create_blog(size_t capacity) {
+Blog *create_blog(size_t capacity, size_t size_mult) {
     Record *records = create_records(capacity);
     if (records == NULL) {
         return NULL;
@@ -36,7 +38,7 @@ Blog *create_blog(size_t capacity) {
     }
 
     bl->size = 0;
-    bl->size_mult = 0;
+    bl->size_mult = size_mult;
     bl->capacity = capacity;
     bl->records = records;
 
@@ -44,9 +46,9 @@ Blog *create_blog(size_t capacity) {
 };
 
 size_t find_place(Blog *bl, Record *rec) {
-    size_t place = bl->size;
+    size_t place = bl->size - 1;
 
-    while (rec->first_month_statistic < bl[place].records->first_month_statistic) {
+    while (rec->first_month_statistic < bl->records[place].first_month_statistic) {
         place--;
     }
     // because we want to add element after less found
@@ -54,8 +56,8 @@ size_t find_place(Blog *bl, Record *rec) {
 };
 
 void shift_records(Blog *bl, size_t n) {
-    for (size_t i = bl->size + 1; i > n; i--) {
-        bl[i].records = bl[i - 1].records;
+    for (size_t i = bl->size; i > n; i--) {
+        bl->records[i] = bl->records[i-1];
     }
 };
 
@@ -82,6 +84,7 @@ bool insert_element(Blog *bl, Record *rec) {
     size_t place = find_place(bl, rec);
     shift_records(bl, place);
     bl->records[place] = *rec;
+    bl->size++;
 
     return true;
 };
@@ -89,13 +92,18 @@ bool insert_element(Blog *bl, Record *rec) {
 void print_records(Blog *bl, size_t n) {
     if (n > bl->size)
         printf("Sorry not enough records\n");
+    printf("%lu", bl->size-1);
 
     printf("Popular records :\n");
-    for (int i = 0; i < n && i < bl->size; i++) {
-        printf("\tnumber - %d", i + 1);
+    for (size_t i = bl->size-1, j = 1; i >= 0 && j <= n; i--, j++) {
+        printf("\tnumber - %lu ", j);
         printf("\t\t Name - %s\n", bl->records[i].name);
         printf("\t\t Tags - %s\n", bl->records[i].tags);
         printf("\t\t Content - %s\n", bl->records[i].content);
+        printf("\t\t Count of actions during first month - %d\n", bl->records[i].first_month_statistic);
+
+        if (i==0)
+            break;
     }
 };
 
@@ -108,24 +116,6 @@ void free_blog(Blog **bl) {
         free(*bl);
         (*bl) = NULL;
         return;
-    }
-
-    for (size_t i = 0; i < (*bl)->capacity; ++i) {
-        if ((*bl)->records[i].name) {
-            free((*bl)->records[i].name);
-        }
-        if ((*bl)->records[i].content) {
-            free((*bl)->records[i].content);
-        }
-        if ((*bl)->records[i].tags) {
-            free((*bl)->records[i].tags);
-        }
-        if ((*bl)->records[i].comments != NULL) {
-            free((*bl)->records[i].comments);
-        }
-        if ((*bl)->records[i].marks != NULL) {
-            free((*bl)->records[i].marks);
-        }
     }
 
     free((*bl)->records);

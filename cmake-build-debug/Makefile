@@ -210,7 +210,7 @@ storage: cmake_check_build_system
 
 # fast build rule for target.
 storage/fast:
-	$(MAKE) $(MAKESILENT) -f src/storage/CMakeFiles/storage.dir/build.make src/storage/CMakeFiles/storage.dir/build
+	$(MAKE) $(MAKESILENT) -f src/blog/CMakeFiles/storage.dir/build.make src/blog/CMakeFiles/storage.dir/build
 .PHONY : storage/fast
 
 #=============================================================================

@@ -11,14 +11,14 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../src/storage"
+  "../src/blog"
   "../vendor/googltest/googletest/include"
   "../vendor/googltest/googletest"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/storage/CMakeFiles/storage.dir/DependInfo.cmake"
+  "/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/src/blog/CMakeFiles/storage.dir/DependInfo.cmake"
   "/home/fillinmar/technoparkC++/techno-ih1/cmake-build-debug/vendor/googltest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
