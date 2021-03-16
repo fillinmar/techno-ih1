@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wno-unknown-pragmas -Wno-sign-compare -Woverloaded-virtual -Wwrite-strings -Wno-unused -Werror -Wpedantic -fprofile-arcs -ftest-coverage -O0 -g   CMakeFiles/date_test.dir/date_test.cpp.o CMakeFiles/date_test.dir/main.cpp.o  -o date_test  ../../../src/date/libdate.a ../../../lib/libgtestd.a -lpthread 
